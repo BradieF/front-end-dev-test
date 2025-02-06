@@ -7,8 +7,14 @@
 
 h2{
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin: 160px 0px 20px 200px;
   font-size: 35px;
+  color: rgb(100, 51, 145);
+  font-size: 45px;
+}
+
+p{
+  margin: 0px 90px 0px 200px;
 }
 
 a{
@@ -17,6 +23,16 @@ a{
   color: rgb(100, 51, 145);
   font-weight: 800;
   letter-spacing: 1px;
+  margin-left: 200px;
+}
+
+button {
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 15px 15px;
+  border: 0px;
+  color: white;
+  border-radius: 4px;
 }
 
 /* ---------------------Header---------------------- */
@@ -53,11 +69,6 @@ h1{
 
 .headerButton{
   background-color: rgb(148, 83, 183);
-  border: 0px;
-  color: white;
-  padding: 15px 15px;
-  font-size: 15px;
-  letter-spacing: 1px;
   margin-top: 30px;
   display: block; 
   margin-left: auto; 
@@ -67,27 +78,92 @@ h1{
 /* ----------------Second Row --------------------- */
 
 .secondRow{
-  height: 100vh;
+  height: 75vh; 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .textColumn{
   width: 50vw; 
-  height: 75vh; 
   display: flex;
   flex-direction: column;
-  padding: 150px;
   color: rgb(106, 106, 106);
 }
 
 .photoColumn {
   width: 50vw;
-  height: 75vh; 
   background: url(front-end-dev-test-assets/img-1.jpg) no-repeat center center; 
   background-size: cover; 
-  display: inline-block; 
+  display: flex;
 }
 
-.textColumn h2{
-  color: rgb(100, 51, 145);
+
+/* --------------------- Third Column ------------------------ */
+
+.thirdRow{
+  width: 100vw;
+  height: 75vh; 
+  background: url(front-end-dev-test-assets/banner-1.jpg) no-repeat center center; 
+  background-size: cover; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.thirdRow h2{
+  margin: 0px 0px 20px 200px;
+}
+
+.thirdRow button {
+  background-color: rgb(255, 140, 0);
+  width: 200px;
+  margin-left: 200px;
+}
+
+/* ----------------- Fourth Row --------------------- */
+.fourthRow{
+  display: flex;
+  height: 75vh;
+}
+
+
+.gridContainer{
+  width: 50vw;
+}
+.iconGrid {
+  padding: 120px 150px 150px 150px;
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 150px;
+}
+
+.iconContainer{
+  border: solid rgb(148, 83, 183) 2px;
+  border-radius: 50%;
+}
+
+.iconContainer img{
+  padding: 20px;
+}
+
+.iconContainer .smallerIcons{
+  padding: 10px;
+}
+
+.fourthRow .textColumn {
+  display: block;
+  margin: auto;
+}
+
+.fourthRow h2{
+  margin: 40px 0px 20px 200px;
+  color: black;
+}
+.fourthRow p{
+  margin-bottom: 20px;
+}
+
+
+
+
+
