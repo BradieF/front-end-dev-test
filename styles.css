@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* ---------------------Header---------------------- */
+
+.header {
+  height: 100vh;
+  background-color: black;
+  background-image: url(front-end-dev-test-assets/hero.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.logo{
+  width: 325px;
+  padding: 30px;
+  margin-left: 100px;
+}
+
+span {
+  font: 800 40px Arial;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px white;
+  font-size: 80px;
+  letter-spacing: 0px;
+}
+
+h1{
+  margin-top: 170px;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+button{
+  background-color: rgb(169, 96, 208);
+  border: 0px;
+  color: white;
+  padding: 15px 15px;
+  font-size: 15px;
+  margin-top: 30px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
