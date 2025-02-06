@@ -5,6 +5,20 @@
   box-sizing: border-box;
 }
 
+h2{
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+a{
+  margin: 30px 0px;
+  text-decoration: none;
+  color: rgb(100, 51, 145);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
 /* ---------------------Header---------------------- */
 
 .header {
@@ -37,14 +51,43 @@ h1{
   letter-spacing: 7px;
 }
 
-button{
-  background-color: rgb(169, 96, 208);
+.headerButton{
+  background-color: rgb(148, 83, 183);
   border: 0px;
   color: white;
   padding: 15px 15px;
   font-size: 15px;
+  letter-spacing: 1px;
   margin-top: 30px;
   display: block; 
   margin-left: auto; 
   margin-right: auto; 
+}
+
+/* ----------------Second Row --------------------- */
+
+.secondRow{
+  height: 100vh;
+  display: flex;
+}
+
+.textColumn{
+  width: 50vw; 
+  height: 75vh; 
+  display: flex;
+  flex-direction: column;
+  padding: 150px;
+  color: rgb(106, 106, 106);
+}
+
+.photoColumn {
+  width: 50vw;
+  height: 75vh; 
+  background: url(front-end-dev-test-assets/img-1.jpg) no-repeat center center; 
+  background-size: cover; 
+  display: inline-block; 
+}
+
+.textColumn h2{
+  color: rgb(100, 51, 145);
 }
