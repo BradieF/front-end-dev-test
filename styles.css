@@ -41,6 +41,11 @@ button {
   border-radius: 4px;
 }
 
+.mainDiv{
+  width: 100vw;
+  height: 75vh; 
+}
+
 /* ---------------------Header---------------------- */
 
 .header {
@@ -115,7 +120,6 @@ h1{
 /* ----------------Second Row --------------------- */
 
 .secondRow{
-  height: 75vh; 
   display: flex;
 }
 
@@ -138,10 +142,7 @@ h1{
 /* --------------------- Third Column ------------------------ */
 
 .thirdRow{
-  width: 100vw;
-  height: 75vh; 
   background: url(front-end-dev-test-assets/banner-1.jpg) no-repeat center center; 
-  background-size: cover; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,7 +150,6 @@ h1{
 
 .thirdRow .textContainer{
   margin-left: 10%;
-
 }
 
 .thirdRow button {
@@ -160,7 +160,6 @@ h1{
 /* ----------------- Fourth Row --------------------- */
 .fourthRow{
   display: flex;
-  height: 75vh;
 }
 
 .gridContainer{
@@ -194,6 +193,56 @@ h1{
   width: 90%;
 }
 
+/* ------------------- Fifth Row -------------------  */
+
+.fifthRow{
+  background: url(front-end-dev-test-assets/banner-2.jpg) no-repeat center center; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.fifthRow .textContainer{
+  width: 30%;
+  margin: 10%;
+}
+
+.fifthRow button{
+  background-color: rgb(255, 140, 0);
+  padding: 3% 5%;
+}
+
+/* ------------------- Sixth Row -------------------  */
+
+.fiveStars{
+  width: 40%;
+}
+
+.sixthRow h2{
+  color: black;
+}
+
+.socials{
+  width: 4%;
+}
+.footer{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sixthRow .main{
+  display: flex;
+  flex: 5;
+}
+.sixthRow{
+  display: flex;
+  flex-direction: column;
+}
+.sixthRow .textContainer{
+  width: 100%;
+  display: inline-block;
+}
 
 
 
