@@ -6,6 +6,9 @@
   flex-shrink: 0;
   font-size: 16px;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 h2{
   letter-spacing: 2px;
@@ -26,13 +29,15 @@ a{
   font-weight: 800;
   letter-spacing: 1px;
 }
+a:hover{
+  color: rgb(148, 83, 183);
+}
 
 .textColumn{
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: rgb(106, 106, 106);
-  /* padding-left: 10%; */
 }
 
 .textContainer{
@@ -47,6 +52,10 @@ button {
   border: 0px;
   color: white;
   border-radius: 4px;
+  background-color: rgb(255, 140, 0);
+}
+button:hover{
+  background-color: rgb(222, 123, 2);
 }
 
 .mainDiv{
@@ -102,7 +111,7 @@ a{
   padding: 2%;
 }
 
-.welcome span {
+#welcome span {
   font: 800 40px Arial;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 3px white;
@@ -125,6 +134,10 @@ h1{
   margin-right: auto; 
   margin-top: 20px;
 }
+.headerButton:hover{
+  background-color: rgb(100, 51, 145);;
+
+}
 
 /* ----------------Second Row --------------------- */
 
@@ -139,6 +152,7 @@ h1{
 .textContainer{
   width: 60%;
 }
+
 
 .photoColumn {
   width: 50vw;
@@ -164,9 +178,10 @@ h1{
 }
 
 #thirdRow button {
-  background-color: rgb(255, 140, 0);
-  width: 200px;
+  width: 200px;  
 }
+
+
 
 /* ----------------- Fourth Row --------------------- */
 #fourthRow{
@@ -177,11 +192,18 @@ h1{
   width: 50vw;
 }
 .iconGrid {
-  /* go back and double check */
-  padding: 120px 150px 150px 150px; 
+  width: 60%;
   grid-template-columns: repeat(2, 1fr);
   display: grid;
-  gap: 150px;
+  gap: 75px;
+  column-gap: 50%;
+  position: relative;
+  left: 15%;
+  top: 15%;
+}
+.gridCell h3{
+  text-align: center;
+  padding: 15px;
 }
 
 .iconContainer{
@@ -190,18 +212,19 @@ h1{
 }
 
 .iconContainer img{
-  padding: 20px;
+  padding: 15px;
 }
 
 .iconContainer .smallerIcons{
   padding: 10px;
 }
 
+
 #fourthRow h2{
   color: black;
 }
 #fourthRow .textContainer{
-  width: 50%;
+  width: 60%;
 }
 
 /* ------------------- Fifth Row -------------------  */
@@ -216,11 +239,9 @@ h1{
   position: absolute;
   left:60%;
   width: 30%;
-  
 }
 
 #fifthRow button{
-  background-color: rgb(255, 140, 0);
   padding: 3% 5%;
 }
 
@@ -271,7 +292,6 @@ h1{
   position: relative;
   top: 45%;
 } 
-
 
 .slideButtons{
   width: 100%;
@@ -333,25 +353,23 @@ h1{
   list-style: none;
 }
 
-
-
 .slideNav{
   display: flex;
   justify-content: center;
+  justify-self: center;
   padding: 5px;
   position: relative;
-  top: 20%;
-  gap: 4px;
+  width: 200px;
+  top: 15%;
+  gap: 5px;
 }
 
 button.slideIndicator{
-  border: 0;
-  border-radius: 50%;
   width: 1px;
-  height: 1px;
-  background-color: rgb(252, 197, 130);
-  
+  background-color: rgb(252, 221, 184);
+
 }
+
 
 .slideIndicator.currentSlide{
   background-color: rgb(255, 140, 0);
