@@ -15,6 +15,7 @@ h2{
   font-size: 45px;
 }
 
+
 p{
   margin-bottom: 8%;
 }
@@ -127,7 +128,7 @@ h1{
 
 /* ----------------Second Row --------------------- */
 
-.secondRow{
+#secondRow{
   display: flex;
 }
 
@@ -149,26 +150,26 @@ h1{
 
 /* --------------------- Third Column ------------------------ */
 
-.thirdRow{
+#thirdRow{
   background: url(front-end-dev-test-assets/banner-1.jpg) no-repeat center center; 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.thirdRow .textContainer{
+#thirdRow .textContainer{
   position: relative;;
   left: 13%;
   width: 35%;
 }
 
-.thirdRow button {
+#thirdRow button {
   background-color: rgb(255, 140, 0);
   width: 200px;
 }
 
 /* ----------------- Fourth Row --------------------- */
-.fourthRow{
+#fourthRow{
   display: flex;
 }
 
@@ -196,29 +197,29 @@ h1{
   padding: 10px;
 }
 
-.fourthRow h2{
+#fourthRow h2{
   color: black;
 }
-.fourthRow .textContainer{
+#fourthRow .textContainer{
   width: 50%;
 }
 
 /* ------------------- Fifth Row -------------------  */
 
-.fifthRow{
+#fifthRow{
   background: url(front-end-dev-test-assets/banner-2.jpg) no-repeat center center; 
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.fifthRow .textContainer{
+#fifthRow .textContainer{
   position: absolute;
   left:60%;
   width: 30%;
   
 }
 
-.fifthRow button{
+#fifthRow button{
   background-color: rgb(255, 140, 0);
   padding: 3% 5%;
 }
@@ -229,12 +230,13 @@ h1{
   width: 40%;
 }
 
-.sixthRow h2{
+#sixthRow h2{
   color: black;
 }
 
-.socials{
-  width: 4%;
+.footer a{
+  width: 3%;
+  height: auto;
 }
 .footer{
   flex: 1;
@@ -243,16 +245,16 @@ h1{
   gap: 20px;
 }
 
-.sixthRow .main{
+#sixthRow .main{
   display: flex;
   width: 100%;
   flex: 5;
 }
-.sixthRow{
+#sixthRow{
   display: flex;
   flex-direction: column;
 }
-.sixthRow .textContainer{
+#sixthRow .textContainer{
   width: 70%;
 } 
 
@@ -290,8 +292,7 @@ h1{
 
 .footerCaption{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto 15px auto;
 }
 
 .reviewSlide h3{
@@ -304,17 +305,20 @@ h1{
 .reviewSlide p{
   width: 100%;
   font-size: small;
+  margin: 0;
 }
 
 .reviewSlide span{
   color: rgb(177, 177, 177);
+  position: relative;
+  left: 5%;
   float: right;
   font-size: small;
 
 }
 
 .reviewContainer{
-  background: lightblue;
+  /* background: lightblue; */
   position: relative;
   height: 250px;
   width: 80%;
@@ -337,5 +341,18 @@ h1{
   padding: 5px;
   position: relative;
   top: 20%;
-  gap: 2px;
+  gap: 4px;
+}
+
+button.slideIndicator{
+  border: 0;
+  border-radius: 50%;
+  width: 1px;
+  height: 1px;
+  background-color: rgb(252, 197, 130);
+  
+}
+
+.slideIndicator.currentSlide{
+  background-color: rgb(255, 140, 0);
 }
