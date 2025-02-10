@@ -9,4 +9,4 @@ const dots = Array.from(dotNavs.children)
 
 //click left to move slide left
 //click right to move slide right
-//click indicator to navigate to slide
+//click indicator to navigate to slides
