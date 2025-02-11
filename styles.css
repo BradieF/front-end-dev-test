@@ -56,6 +56,7 @@ button {
 }
 button:hover{
   background-color: rgb(222, 123, 2);
+  cursor: pointer;
 }
 
 .mainDiv{
@@ -206,6 +207,12 @@ h1{
   padding: 15px;
 }
 
+.gridCell:hover h3, 
+.gridCell:hover .iconContainer{
+  transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
 .iconContainer{
   border: solid rgb(148, 83, 183) 2px;
   border-radius: 50%;
@@ -255,21 +262,11 @@ h1{
   color: black;
 }
 
-.footer a{
-  width: 3%;
-  height: auto;
-}
-.footer{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
 
 #sixthRow .main{
   display: flex;
   width: 100%;
-  flex: 5;
+  flex: 6;
 }
 #sixthRow{
   display: flex;
@@ -283,12 +280,13 @@ h1{
   background-color: white;
   width: 5%; 
   padding: 0;
+  z-index: 1;
   
 }
 
 .buttonContainer{
   display: flex;
-  justify-content: space-between;
+  gap: 89%;
   position: relative;
   top: 45%;
 } 
@@ -308,11 +306,7 @@ h1{
   display: flex;
   flex-direction: column;
   padding: 0% 10%;
-}
-
-.footerCaption{
-  display: block;
-  margin: 0px auto 15px auto;
+  
 }
 
 .reviewSlide h3{
@@ -341,9 +335,9 @@ h1{
   /* background: lightblue; */
   position: relative;
   height: 250px;
-  width: 80%;
-  left: 10%;
+  width: 70%;
   top: 20%;
+  overflow: hidden;
 
 }
 
@@ -351,16 +345,17 @@ h1{
   padding:0;
   margin: 0;
   list-style: none;
+  height: 100%;
 }
 
 .slideNav{
+  padding: 5px;
+  position: relative;
   display: flex;
   justify-content: center;
   justify-self: center;
-  padding: 5px;
-  position: relative;
   width: 200px;
-  top: 15%;
+  bottom: 20%;
   gap: 5px;
 }
 
@@ -373,4 +368,24 @@ button.slideIndicator{
 
 .slideIndicator.currentSlide{
   background-color: rgb(255, 140, 0);
+}
+
+.is-hidden {display: none;}
+
+/* ---------------- Footer ------------------ */
+
+.footer a{
+  width: 3%;
+  height: auto;
+}
+.footer{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footerCaption{
+  display: block;
+  margin: 0px auto 15px auto;
 }
