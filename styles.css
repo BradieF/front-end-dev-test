@@ -262,12 +262,12 @@ h1{
   color: black;
 }
 
-
 #sixthRow .main{
   display: flex;
   width: 100%;
   flex: 6;
 }
+
 #sixthRow{
   display: flex;
   flex-direction: column;
@@ -277,23 +277,22 @@ h1{
 } 
 
 .reviewColumn .reviewsButtons{
-  background-color: white;
+  background-color: transparent;
   width: 5%; 
   padding: 0;
   z-index: 1;
-  
 }
 
 .buttonContainer{
   display: flex;
   gap: 89%;
   position: relative;
-  top: 45%;
+  top: 40%;
 } 
 
 .slideButtons{
-  width: 100%;
-  height: 100%;
+  width: 65%;
+  height: 65%;
 }
 
 .reviewColumn{
@@ -306,7 +305,6 @@ h1{
   display: flex;
   flex-direction: column;
   padding: 0% 10%;
-  
 }
 
 .reviewSlide h3{
@@ -328,7 +326,6 @@ h1{
   left: 5%;
   float: right;
   font-size: small;
-
 }
 
 .reviewContainer{
@@ -338,7 +335,6 @@ h1{
   width: 70%;
   top: 20%;
   overflow: hidden;
-
 }
 
 .reviewTrack{
@@ -362,9 +358,7 @@ h1{
 button.slideIndicator{
   width: 1px;
   background-color: rgb(252, 221, 184);
-
 }
-
 
 .slideIndicator.currentSlide{
   background-color: rgb(255, 140, 0);
