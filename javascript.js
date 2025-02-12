@@ -1,10 +1,10 @@
 
 // ------------------ Review Slideshow --------------------------
-const track = document.querySelector('.reviewTrack');
+const track = document.querySelector('.review__track');
 const slides = Array.from(track.children)
 
-const nextButton = document.querySelector('.rightButton')
-const prevButton = document.querySelector('.leftButton')
+const nextButton = document.querySelector('.review__button--next')
+const prevButton = document.querySelector('.review__button--prev')
 
 const dotsNav = document.querySelector('.slideNav')
 const dots = Array.from(dotsNav.children)
@@ -19,15 +19,15 @@ const setSlidePosition = ((slide, index)=> {
 slides.forEach(setSlidePosition);
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
-  currentSlide.classList.remove('currentSlide');
-  targetSlide.classList.add('currentSlide')
+  currentSlide.classList.remove('current__slide');
+  targetSlide.classList.add('current__slide')
   track.style.transform = 'translateX(-'+ targetSlide.style.left + ')';
   track.style.transition = 'transform 0.5s ease';
 }
 
 const updateDots = (currentDot, targetDot) =>{
-  currentDot.classList.remove('currentSlide');
-  targetDot.classList.add('currentSlide');
+  currentDot.classList.remove('current__slide');
+  targetDot.classList.add('current__slide');
 }
 
 hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
@@ -47,9 +47,9 @@ hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
 
 //click left to move slide left
 prevButton.addEventListener('click', e => {
-  const currentSlide = track.querySelector('.currentSlide');
+  const currentSlide = track.querySelector('.current__slide');
   const prevSlide = currentSlide.previousElementSibling;
-  const currentDot = dotsNav.querySelector('.currentSlide');
+  const currentDot = dotsNav.querySelector('.current__slide');
   const prevDot = currentDot.previousElementSibling;
   const prevIndex = slides.findIndex(slide => slide === prevSlide)
 
@@ -62,9 +62,9 @@ prevButton.addEventListener('click', e => {
 
 //click right to move slide right
 nextButton.addEventListener('click', e =>{
-  const currentSlide = track.querySelector('.currentSlide');
+  const currentSlide = track.querySelector('.current__slide');
   const nextSlide = currentSlide.nextElementSibling;
-  const currentDot = dotsNav.querySelector('.currentSlide');
+  const currentDot = dotsNav.querySelector('.current__slide');
   const nextDot = currentDot.nextElementSibling;
   const nextIndex = slides.findIndex(slide => slide === nextSlide)
 
@@ -81,8 +81,8 @@ dotsNav.addEventListener('click', e => {
 
   if (!targetDot) return;
 
-  const currentSlide = track.querySelector('.currentSlide');
-  const currentDot = dotsNav.querySelector('.currentSlide')
+  const currentSlide = track.querySelector('.current__slide');
+  const currentDot = dotsNav.querySelector('.current__slide')
   const targetIndex = dots.findIndex(dot => dot === targetDot)
   const targetSlide = slides[targetIndex];
   
@@ -93,9 +93,11 @@ dotsNav.addEventListener('click', e => {
 
 // -------------------- Header -------------------------
 
-const headerButton = document.querySelector('.headerButton');
+const headerButton = document.querySelector('.button--primary');
 const secondRow = document.querySelector('#secondRow');
 
 headerButton.addEventListener('click', () =>{
   secondRow.scrollIntoView({ behavior: 'smooth' });
 })
+
+

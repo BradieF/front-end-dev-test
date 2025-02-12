@@ -34,14 +34,14 @@ a:hover{
   color: rgb(148, 83, 183);
 }
 
-.textColumn{
+.section__text-column{
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: rgb(106, 106, 106);
 }
 
-.textContainer{
+.section__text-container{
   position: relative;
   left: 25%;
   overflow-y: scroll;
@@ -61,7 +61,7 @@ button:hover{
   cursor: pointer;
 }
 
-.mainDiv{
+.section{
   width: 100vw;
   height: 75vh; 
 }
@@ -82,24 +82,24 @@ button:hover{
   padding: 1% 2%;
 }
 
-#welcome{
+#header__welcome{
   flex-grow: 1;
   align-content: center;
   justify-content: center;
   transform: translateY(-2rem);
 }
 
-.headerMenu{
+.header__menu{
   display: flex;
   justify-content: space-between;
 }
 
-#sideMenu{
+#header__menu-list{
   display: block;
   padding: 40px 0px 40px 40px;
 } 
 
-#sideMenu a{
+#header__menu-list a{
   margin: 10px;
 } 
 
@@ -113,7 +113,7 @@ a{
   padding: 2%;
 }
 
-#welcome span {
+#header__welcome span {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 3px white;
   font-size: 6rem;
@@ -128,14 +128,14 @@ h1{
   letter-spacing: 7px;
 }
 
-.headerButton{
+.button--primary{
   background-color: rgb(148, 83, 183);
   display: block; 
   margin-left: auto; 
   margin-right: auto; 
   margin-top: 20px;
 }
-.headerButton:hover{
+.button--primary:hover{
   background-color: rgb(100, 51, 145);;
 }
 
@@ -145,16 +145,16 @@ h1{
   display: flex;
 }
 
-.textColumn{
+.section__text-column{
   width: 50vw; 
 }
 
-.textContainer{
+.section__text-container{
   width: 60%;
 }
 
 
-.photoColumn {
+.section__photo-column {
   width: 50vw;
   background: url(front-end-dev-test-assets/img-1.jpg) no-repeat center center; 
   background-size: cover; 
@@ -171,7 +171,7 @@ h1{
   justify-content: center;
 }
 
-#thirdRow .textContainer{
+#thirdRow .section__text-container{
   position: relative;;
   left: 13%;
   width: 35%;
@@ -188,10 +188,10 @@ h1{
   display: flex;
 }
 
-.gridContainer{
+.section__grid-container{
   width: 50vw;
 }
-.iconGrid {
+.grid {
   width: 60%;
   grid-template-columns: repeat(2, 1fr);
   display: grid;
@@ -228,7 +228,7 @@ h1{
 #fourthRow h2{
   color: black;
 }
-#fourthRow .textContainer{
+#fourthRow .section__text-container{
   width: 60%;
 }
 
@@ -239,12 +239,12 @@ h1{
 
 }
 
-#fifthRow .mainDiv{
+#fifthRow .section{
   display: flex;
   justify-content: flex-end;
 
 }
-#fifthRow .textContainer{
+#fifthRow .section__text-container{
   left:60%;
   width: 30%;
   top: 30%;
@@ -264,7 +264,7 @@ h1{
   color: black;
 }
 
-#sixthRow .main{
+.section__main{
   display: flex;
   width: 100%;
   flex: 6;
@@ -274,18 +274,18 @@ h1{
   display: flex;
   flex-direction: column;
 }
-#sixthRow .textContainer{
+#sixthRow .section__text-container{
   width: 70%;
 } 
 
-.reviewColumn .reviewsButtons{
+.review .reviewsButtons{
   background-color: transparent;
   width: 5%; 
   padding: 0;
   z-index: 1;
 }
 
-.buttonContainer{
+.review__buttons{
   display: flex;
   gap: 89%;
   position: relative;
@@ -297,11 +297,11 @@ h1{
   height: 65%;
 }
 
-.reviewColumn{
+.review{
   width: 50%;
 }
 
-.reviewSlide{
+.review__slide{
   width: 100%;
   position: absolute;
   display: flex;
@@ -313,14 +313,14 @@ h1{
 
 }
 
-.reviewSlide h3{
+.review__slide h3{
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   color: rgb(100, 51, 145);
 }
 
-.reviewSlide p{
+.review__slide p{
   width: 100%;
   font-size: small;
   overflow: scroll;
@@ -329,14 +329,14 @@ h1{
   text-overflow: ellipsis; 
 }
 
-.reviewSlide span{
+.review__slide span{
   color: rgb(177, 177, 177);
   float: right;
   font-size: small;
 
 }
 
-.reviewContainer{
+.review__container{
   /* background: lightblue; */
   position: relative;
   height: 70%;
@@ -345,7 +345,7 @@ h1{
   overflow-x: hidden;
 }
 
-.reviewTrack{
+.review__track{
   padding:0;
   margin: 0;
   list-style: none;
@@ -366,7 +366,7 @@ button.slideIndicator{
   background-color: rgb(252, 221, 184);
 }
 
-.slideIndicator.currentSlide{
+.slideIndicator.current__slide{
   background-color: rgb(255, 140, 0);
 }
 
@@ -374,18 +374,18 @@ button.slideIndicator{
 
 /* ---------------- Footer ------------------ */
 
-.footer a{
+.footer__icons a{
   width: 3%;
   height: auto;
 }
-.footer{
+.footer__icons{
   flex: 1;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.footerCaption{
+.footer__caption{
   display: block;
   margin: 0px auto 15px auto;
 }
@@ -394,16 +394,16 @@ button.slideIndicator{
 
 @media only screen and (max-width:650px){
   
- #sideMenu {
+ #header__menu-list {
     display: none;
   }
 
-  #welcome span{
+  #header__welcome span{
     font-size: 2.5rem;
     -webkit-text-stroke: 1px white;
   }
 
-  #welcome h1{
+  #header__welcome h1{
     font-size: 2rem;
   }
 
@@ -420,10 +420,10 @@ button.slideIndicator{
 
   }
 
-  .gridContainer{
+  .section__grid-container{
     display: block;
   }
-  .iconGrid {
+  .grid {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -455,40 +455,40 @@ button.slideIndicator{
     flex-direction: column;
   }
 
-  #fifthRow .textContainer{
+  #fifthRow .section__text-container{
     left: 15%;
     width: 30%;
     top: 30%;
   }
   
-  #sixthRow .textColumn{
+  #sixthRow .section__text-column{
     width: 100vw;
     padding-top: 10%;
   }
 
-  #sixthRow .textColumn h2{
+  #sixthRow .section__text-column h2{
     font-size: 2.5rem;
   }
 
-  #sixthRow .textContainer{
+  #sixthRow .section__text-container{
     left: 20%;
   }
 
-  .reviewColumn{
+  .review{
     width: 100vw;
     align-content: center;
   }
-  .reviewContainer{
+  .review__container{
     height: 300px;
     width: 90%;
     justify-self: center;
   }
 
-  .reviewSlide{
+  .review__slide{
     height: 200px;
   }
 
-  .reviewSlide p{
+  .review__slide p{
     font-size: 10px;
   
   }
@@ -503,15 +503,22 @@ button.slideIndicator{
 
 }
 @media only screen and (max-height: 570px) {
-  .iconGrid {
+  .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
+    
   }
 
   .gridCell {
-    height: auto;
-    width: auto;
+      height: 60px;
+      width: 60px;
+  }
+
+  .gridCell h3{
+    text-align: center;
+    font-size: 10px;
+    padding: 0;
   }
 }
