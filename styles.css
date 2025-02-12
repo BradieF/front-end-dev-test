@@ -87,22 +87,48 @@ button:hover{
   flex-grow: 1;
   align-content: center;
   justify-content: center;
-  transform: translateY(-2rem);
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition for both opacity and transform */
+  transform: translateY(0rem); 
+
+
 }
 
-.header__menu{
+
+.header__menu {
   display: flex;
   justify-content: space-between;
 }
 
-#header__menu-list{
+#header__menu-list {
   display: block;
   padding: 40px 0px 40px 40px;
-} 
+  position: relative; 
+}
 
-#header__menu-list a{
+#header__menu-list a {
   margin: 10px;
-} 
+  position: relative; 
+  color: rgb(100, 51, 145);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#header__menu-list a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: white;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transition: width 0.5s ease; 
+}
+
+#header__menu-list a:hover::after {
+  width: 100%; 
+}
 
 a{
   align-items: center;
@@ -210,7 +236,7 @@ h1{
 .gridCell:hover h3, 
 .gridCell:hover .iconContainer{
   transform: scale(1.1); 
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .iconContainer{
@@ -339,7 +365,6 @@ h1{
 }
 
 .review__container{
-  /* background: lightblue; */
   position: relative;
   height: 70%;
   width: 70%;
@@ -394,7 +419,8 @@ button.slideIndicator{
 
 /* ------------------------------ CSS for mobile ------------------------ */
 
-@media only screen and (max-width:650px){
+@media only screen and (max-width:650px)
+{
   
   html, body {
     overflow-x: hidden;
@@ -404,11 +430,20 @@ button.slideIndicator{
   * {
     max-width: 100%;
   }
+
   h2{
     width: 50vw;
+    font-size: 2rem;
   }
+
+  p {
+    font-size: 1rem; 
+    margin-bottom: 4%;
+  }
+
+  /* -------------- Header -------------- */
  #header__menu-list {
-    display: none;
+    display:none;
   }
 
   #header__welcome span{
@@ -431,6 +466,12 @@ button.slideIndicator{
     width: 125px;
   }
 
+  #secondRow .section__photo-column{
+    background-position: 50%;
+  }
+
+  /* -------------- Third Row -------------- */
+
 
   #thirdRow{
     background-position: 60%;
@@ -439,10 +480,14 @@ button.slideIndicator{
     width: 300px;
   }
 
+
+  /* -------------- Fifth Row -------------- */
+
   #fifthRow{
     background-position: 15%;
   }
-
+        /* --------- Grid --------- */
+        
   .section__grid-container{
     display: block;
     width: 30vw;
@@ -466,25 +511,18 @@ button.slideIndicator{
     padding: 5px;
   }
 
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem; 
-    margin-bottom: 4%;
-  }
-
-  .section__main{
-    flex-direction: column;
-  }
-
   #fifthRow .section__text-container{
     left: 15%;
     width: 30%;
     top: 30%;
   }
+
+  /* ------------ Sixth Row ------------- */
+
+  .section__main{
+    flex-direction: column;
+  }
+
   
   #sixthRow .section__text-column{
     width: 100vw;
@@ -498,6 +536,8 @@ button.slideIndicator{
   #sixthRow .section__text-container{
     left: 20%;
   }
+
+      /* ---------- Review Section ----------- */
 
   .review{
     width: 100vw;
@@ -525,6 +565,7 @@ button.slideIndicator{
   .footer__icons a {
     width: 25px;
   }
+}
 @media only screen and (max-height: 570px) {
   .grid {
     display: grid;

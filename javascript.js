@@ -100,6 +100,17 @@ headerButton.addEventListener('click', () =>{
   secondRow.scrollIntoView({ behavior: 'smooth' });
 })
 
+
+window.addEventListener('load', function() {
+  const headerTitle = document.querySelector('#header__welcome');
+  if (headerTitle) {
+    headerTitle.style.opacity = '1'; 
+    headerTitle.style.transform = 'translateY(-2rem)';
+  }
+});
+
+
+
 // -------------------- Fifth Row -------------------------
 
 const callButton = document.querySelector('.callButton');
