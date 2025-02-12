@@ -44,7 +44,6 @@ a:hover{
 .section__text-container{
   position: relative;
   left: 25%;
-  overflow-y: scroll;
 }
 
 button {
@@ -59,6 +58,8 @@ button {
 button:hover{
   background-color: rgb(222, 123, 2);
   cursor: pointer;
+  transform: scale(0.95);
+
 }
 
 .section{
@@ -250,9 +251,10 @@ h1{
   top: 30%;
 }
 
-#fifthRow button{
+.callButton{
   padding: 3% 5%;
 }
+
 
 /* ------------------- Sixth Row -------------------  */
 
@@ -394,34 +396,56 @@ button.slideIndicator{
 
 @media only screen and (max-width:650px){
   
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+  h2{
+    width: 50vw;
+  }
  #header__menu-list {
     display: none;
   }
 
   #header__welcome span{
-    font-size: 2.5rem;
+    font-size: 4rem;
     -webkit-text-stroke: 1px white;
   }
 
   #header__welcome h1{
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .button--primary{
+    width: 60px;
+    height: 30px;
+    font-size: 1.5rem;
   }
 
   .logo {
     padding-top: 5%; 
+    width: 125px;
   }
+
 
   #thirdRow{
     background-position: 60%;
   }
+  #thirdRow .section__text-container{
+    width: 300px;
+  }
 
   #fifthRow{
     background-position: 15%;
-
   }
 
   .section__grid-container{
     display: block;
+    width: 30vw;
   }
   .grid {
     display: flex;
@@ -429,6 +453,7 @@ button.slideIndicator{
     align-items: center;
     width: 100px;
     height: fit-content;
+    gap: 30px;
   }
 
   .gridCell{
@@ -451,7 +476,7 @@ button.slideIndicator{
     margin-bottom: 4%;
   }
 
-  .main{
+  .section__main{
     flex-direction: column;
   }
 
@@ -497,11 +522,9 @@ button.slideIndicator{
     display: none;
   }
 
-  .footer a{
-    width: 30px;
+  .footer__icons a {
+    width: 25px;
   }
-
-}
 @media only screen and (max-height: 570px) {
   .grid {
     display: grid;

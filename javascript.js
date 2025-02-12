@@ -100,4 +100,13 @@ headerButton.addEventListener('click', () =>{
   secondRow.scrollIntoView({ behavior: 'smooth' });
 })
 
+// -------------------- Fifth Row -------------------------
+
+const callButton = document.querySelector('.callButton');
+
+callButton.addEventListener('click', ()=>{
+  callButton.style.transition = '0.5s';
+  callButton.style.backgroundColor = 'grey';
+
+})
 
