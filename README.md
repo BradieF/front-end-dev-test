@@ -68,7 +68,13 @@ These required features are requested specifically by the client and should be i
 ### *Please also submit a small write up discussing (leave answers to a sentence or two):*
 
   1. What you technologies you used and why (if you only used html, css, and js please explain any templates or frameworks you may have used i.e. bootstrap)
+    - For this project, I used only html, css, and javascript, though I am familiar with React, React Native, and Express. While im familiar with those frameworks, I chose to focus on the skills im most confident in for this project, to highlight my strengths.
+
+  
   2. Any struggles you faced when developing with technology you chose
+    - Most of the tasks were within my comfort zone, though the review carousel was a new feature I hadnt implemented before. It took a few tries and some research to perfect, but I successfully executed it and learned valuable insight for future projects.
+
   3. What you enjoyed the most and why
+    - Though I found the review carousel challenging, it turned out to be the most enjoyable part of the project due to my love of problem solving and exploring solutions. This feature gave me a great opportunity to learn and grow and sucessfully solving challenges like this prepares me for future obstacles.
 
 If you have any questions please feel free to email me (Sebastian) at sebastian@roostergrin.com
