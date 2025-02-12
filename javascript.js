@@ -95,7 +95,6 @@ dotsNav.addEventListener('click', e => {
 
 const headerButton = document.querySelector('.button--primary');
 const secondRow = document.querySelector('#secondRow');
-
 headerButton.addEventListener('click', () =>{
   secondRow.scrollIntoView({ behavior: 'smooth' });
 })
