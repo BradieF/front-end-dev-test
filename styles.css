@@ -433,11 +433,11 @@ button.slideIndicator{
 
   h2{
     width: 50vw;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   p {
-    font-size: 1rem; 
+    font-size: 1.5rem; 
     margin-bottom: 4%;
   }
 
@@ -470,6 +470,12 @@ button.slideIndicator{
     background-position: 50%;
   }
 
+  /* --------- Second Row ---------- */
+
+  #secondRow .section__text-container{
+    width: 70%;
+  }
+
   /* -------------- Third Row -------------- */
 
 
@@ -478,6 +484,11 @@ button.slideIndicator{
   }
   #thirdRow .section__text-container{
     width: 300px;
+  }
+
+  --------------- Fourth Row ------------------
+  #fourthRow .section__text-container{
+    width: 70%;
   }
 
 
@@ -513,8 +524,8 @@ button.slideIndicator{
 
   #fifthRow .section__text-container{
     left: 15%;
-    width: 30%;
-    top: 30%;
+    width: 40%;
+    top: 20%;
   }
 
   /* ------------ Sixth Row ------------- */
@@ -530,7 +541,7 @@ button.slideIndicator{
   }
 
   #sixthRow .section__text-column h2{
-    font-size: 2.5rem;
+    font-size: 3.0rem;
   }
 
   #sixthRow .section__text-container{
