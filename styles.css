@@ -8,19 +8,20 @@
 }
 html{
   scroll-behavior: smooth;
+  font-size: clamp(8px, 1.5vw, 16px);
 }
 
 h2{
   letter-spacing: 2px;
   padding-bottom: 3%;
-  font-size: 35px;
   color: rgb(100, 51, 145);
-  font-size: 45px;
+  font-size: 2.5rem;
 }
 
 
 p{
   margin-bottom: 8%;
+
 }
 
 a{
@@ -41,12 +42,13 @@ a:hover{
 }
 
 .textContainer{
-  position: relative;;
-  left: 25%
+  position: relative;
+  left: 25%;
+  overflow-y: scroll;
 }
 
 button {
-  font-size: 15px;
+  font-size: 1rem;
   letter-spacing: 1px;
   padding: 2% 2%;
   border: 0px;
@@ -62,7 +64,6 @@ button:hover{
 .mainDiv{
   width: 100vw;
   height: 75vh; 
-  flex-shrink: 0;
 }
 
 /* ---------------------Header---------------------- */
@@ -85,7 +86,7 @@ button:hover{
   flex-grow: 1;
   align-content: center;
   justify-content: center;
-  padding-bottom: 30px;
+  transform: translateY(-2rem);
 }
 
 .headerMenu{
@@ -104,7 +105,7 @@ button:hover{
 
 a{
   align-items: center;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .logo{
@@ -113,16 +114,15 @@ a{
 }
 
 #welcome span {
-  font: 800 40px Arial;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 3px white;
-  font-size: 80px;
+  font-size: 6rem;
   letter-spacing: 0px;
 }
 
 h1{
   display: block;
-  font-size: 70px;
+  font-size: 5rem;
   color: white;
   text-align: center;
   letter-spacing: 7px;
@@ -137,7 +137,6 @@ h1{
 }
 .headerButton:hover{
   background-color: rgb(100, 51, 145);;
-
 }
 
 /* ----------------Second Row --------------------- */
@@ -179,7 +178,7 @@ h1{
 }
 
 #thirdRow button {
-  width: 200px;  
+  width: 40%;  
 }
 
 
@@ -196,7 +195,7 @@ h1{
   width: 60%;
   grid-template-columns: repeat(2, 1fr);
   display: grid;
-  gap: 75px;
+  gap: 3rem;
   column-gap: 50%;
   position: relative;
   left: 15%;
@@ -219,13 +218,12 @@ h1{
 }
 
 .iconContainer img{
-  padding: 15px;
+  padding: 1rem;
 }
 
 .iconContainer .smallerIcons{
   padding: 10px;
 }
-
 
 #fourthRow h2{
   color: black;
@@ -238,14 +236,18 @@ h1{
 
 #fifthRow{
   background: url(front-end-dev-test-assets/banner-2.jpg) no-repeat center center; 
+
+}
+
+#fifthRow .mainDiv{
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+
 }
 #fifthRow .textContainer{
-  position: absolute;
   left:60%;
   width: 30%;
+  top: 30%;
 }
 
 #fifthRow button{
@@ -305,6 +307,10 @@ h1{
   display: flex;
   flex-direction: column;
   padding: 0% 10%;
+  height: 100%;
+  overflow-y: scroll;
+  height: 200px;
+
 }
 
 .reviewSlide h3{
@@ -317,41 +323,41 @@ h1{
 .reviewSlide p{
   width: 100%;
   font-size: small;
+  overflow: scroll;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
 
 .reviewSlide span{
   color: rgb(177, 177, 177);
-  position: relative;
-  left: 5%;
   float: right;
   font-size: small;
+
 }
 
 .reviewContainer{
   /* background: lightblue; */
   position: relative;
-  height: 250px;
+  height: 70%;
   width: 70%;
   top: 20%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .reviewTrack{
   padding:0;
   margin: 0;
   list-style: none;
-  height: 100%;
+  height: 70%;
 }
 
 .slideNav{
   padding: 5px;
-  position: relative;
   display: flex;
   justify-content: center;
   justify-self: center;
   width: 200px;
-  bottom: 20%;
   gap: 5px;
 }
 
@@ -382,4 +388,130 @@ button.slideIndicator{
 .footerCaption{
   display: block;
   margin: 0px auto 15px auto;
+}
+
+/* ------------------------------ CSS for mobile ------------------------ */
+
+@media only screen and (max-width:650px){
+  
+ #sideMenu {
+    display: none;
+  }
+
+  #welcome span{
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px white;
+  }
+
+  #welcome h1{
+    font-size: 2rem;
+  }
+
+  .logo {
+    padding-top: 5%; 
+  }
+
+  #thirdRow{
+    background-position: 60%;
+  }
+
+  #fifthRow{
+    background-position: 15%;
+
+  }
+
+  .gridContainer{
+    display: block;
+  }
+  .iconGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: fit-content;
+  }
+
+  .gridCell{
+    height: 60px;
+    width: 60px;
+  }
+
+  .gridCell h3{
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem; 
+    margin-bottom: 4%;
+  }
+
+  .main{
+    flex-direction: column;
+  }
+
+  #fifthRow .textContainer{
+    left: 15%;
+    width: 30%;
+    top: 30%;
+  }
+  
+  #sixthRow .textColumn{
+    width: 100vw;
+    padding-top: 10%;
+  }
+
+  #sixthRow .textColumn h2{
+    font-size: 2.5rem;
+  }
+
+  #sixthRow .textContainer{
+    left: 20%;
+  }
+
+  .reviewColumn{
+    width: 100vw;
+    align-content: center;
+  }
+  .reviewContainer{
+    height: 300px;
+    width: 90%;
+    justify-self: center;
+  }
+
+  .reviewSlide{
+    height: 200px;
+  }
+
+  .reviewSlide p{
+    font-size: 10px;
+  
+  }
+
+  .slideNav{
+    display: none;
+  }
+
+  .footer a{
+    width: 30px;
+  }
+
+}
+@media only screen and (max-height: 570px) {
+  .iconGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .gridCell {
+    height: auto;
+    width: auto;
+  }
 }
